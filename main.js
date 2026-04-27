@@ -25,3 +25,4 @@ document.querySelectorAll(".card").forEach(card => {
     card.style.setProperty("--y", `${e.clientY - rect.top}px`);
   });
 });
+

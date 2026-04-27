@@ -22,7 +22,7 @@
 <section class="hero">
   <div class="hero-content">
 
-    <span class="comment">// full-stack developer</span>
+    <span class="comment typewriter" id="typewriter"></span>
 
     <h1>
       Ayaan Dhalait<br>
@@ -30,34 +30,53 @@
     </h1>
 
     <p>
-      I design and develop modern applications with performance,
-      clarity, and precision.
+      I build fast, minimal software with obsessive attention to detail.
     </p>
 
     <div class="hero-cta">
-      <button class="primary">Visit My Github</button>
-      <button class="ghost"><span class="comment">// contact().me</span></button>
+      <a href="https://github.com/AyaanDhalait" target="_blank">
+        <button class="primary">Visit My Github</button>
+      </a>
+      <a href="#contact">
+        <button class="ghost"><span class="comment">// contact().me</span></button>
+      </a>
     </div>
 
   </div>
 </section>
 
 <section id="about" class="section">
-  <div class="container">
+  <div class="container about-wrap">
 
-    <span class="comment">// about</span>
+    <div class="about-left">
+      <span class="comment">// about</span>
 
-    <h2>Minimal. Functional. Intentional.</h2>
+      <h2>Building systems that feel fast.</h2>
 
-    <p class="section-text">
-      I build software that feels effortless. Every interaction is crafted
-      for speed, clarity, and detail.
-    </p>
+      <p class="section-text">
+        I’m a developer focused on creating high-performance applications
+        with clean architecture and intentional design.
+      </p>
 
-    <div class="stats">
-      <div><h3>9+</h3><span class="comment">// years</span></div>
-      <div><h3>11+</h3><span class="comment">// projects</span></div>
-      <div><h3>∞</h3><span class="comment">// ideas</span></div>
+      <p class="section-text">
+        I care about how things work under the hood just as much as how they feel.
+        From low-level experiments to polished interfaces, everything I build
+        is driven by clarity and efficiency.
+      </p>
+
+      <div class="about-actions">
+        <a href="#projects" class="primary">view_projects()</a>
+        <a href="#contact" class="ghost"><span class="comment">// get_in_touch</span></a>
+      </div>
+    </div>
+
+    <div class="about-right">
+      <div class="code-block">
+        <div class="code-header">
+          <span></span><span></span><span></span>
+        </div>
+        <pre><code id="about-code"></code></pre>
+      </div>
     </div>
 
   </div>
@@ -67,24 +86,68 @@
   <div class="container">
 
     <span class="comment">// projects</span>
-
     <h2>Selected Work</h2>
 
     <div class="projects">
 
-      <div class="card">
-        <h3>PPlayer</h3>
+      <div class="project-card">
+        <div class="project-top">
+          <span class="comment">// media.player</span>
+          <h3>PPlayer</h3>
+        </div>
+
         <p>Minimal media player built for speed.</p>
+
+        <div class="stack">
+          <span>python</span>
+          <span>ui</span>
+          <span>performance</span>
+        </div>
+
+        <div class="project-footer">
+          <a href="#" onclick="return false;">view_project()</a>
+          <a href="https://github.com/AyaanDhalait" target="_blank">source_code()</a>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Quick</h3>
+      <div class="project-card">
+        <div class="project-top">
+          <span class="comment">// utility.toolkit</span>
+          <h3>Quick</h3>
+        </div>
+
         <p>Utility toolkit designed for efficiency.</p>
+
+        <div class="stack">
+          <span>tools</span>
+          <span>cli</span>
+          <span>automation</span>
+        </div>
+
+        <div class="project-footer">
+          <a href="#" onclick="return false;">view_project()</a>
+          <a href="https://github.com/AyaanDhalait" target="_blank">source_code()</a>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>GiggleOS</h3>
+      <div class="project-card">
+        <div class="project-top">
+          <span class="comment">// experimental.os</span>
+          <h3>GiggleOS</h3>
+        </div>
+
         <p>Experimental OS exploring system design.</p>
+
+        <div class="stack">
+          <span>low-level</span>
+          <span>kernel</span>
+          <span>systems</span>
+        </div>
+
+        <div class="project-footer">
+          <a href="#" onclick="return false;">view_project()</a>
+          <a href="https://github.com/AyaanDhalait" target="_blank">source_code()</a>
+        </div>
       </div>
 
     </div>
@@ -108,19 +171,35 @@
 
   </div>
 </section>
+
 <footer class="footer">
 
-  <div class="footer-inner">
+  <div class="footer-grid">
 
-    <div class="footer-left">
+    <div class="footer-col">
+      <span class="comment">// system.identity</span>
       <h3>Ayaan Dhalait</h3>
       <p>Software Developer</p>
     </div>
 
-    <div class="footer-right">
-      <a href="https://github.com/AyaanDhalait">GitHub</a>
-      <a href="https://linkedin.com/in/ayaan-dhalait">LinkedIn</a>
-      <a href="mailto:ayaan@ayaan.is-a.dev">Email</a>
+    <div class="footer-col">
+      <span class="comment">// navigation</span>
+      <a href="#about">about()</a>
+      <a href="#projects">projects()</a>
+      <a href="#contact">contact()</a>
+    </div>
+
+    <div class="footer-col">
+      <span class="comment">// social.links</span>
+      <a href="https://github.com/AyaanDhalait">github</a>
+      <a href="https://linkedin.com/in/ayaan-dhalait">linkedin</a>
+      <a href="mailto:ayaan@ayaan.is-a.dev">email</a>
+    </div>
+
+    <div class="footer-col">
+      <span class="comment">// system.status</span>
+      <p><span class="dot"></span> All systems operational</p>
+      <p class="uptime">uptime: <span id="uptime"></span></p>
     </div>
 
   </div>
@@ -130,5 +209,100 @@
   </div>
 
 </footer>
+
+<script>
+const lines = [
+  "// full-stack developer",
+  "// performance-focused",
+  "// system builder",
+  "// crafting clean interfaces"
+];
+
+let lineIndex = 0;
+let charIndex = 0;
+let currentLine = "";
+let isDeleting = false;
+
+const typeEl = document.getElementById("typewriter");
+
+function type() {
+  currentLine = lines[lineIndex];
+
+  if (!isDeleting) {
+    typeEl.textContent = currentLine.substring(0, charIndex++);
+  } else {
+    typeEl.textContent = currentLine.substring(0, charIndex--);
+  }
+
+  let speed = isDeleting ? 40 : 70;
+
+  if (!isDeleting && charIndex === currentLine.length + 1) {
+    speed = 1200;
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    lineIndex = (lineIndex + 1) % lines.length;
+    speed = 300;
+  }
+
+  setTimeout(type, speed);
+}
+
+type();
+
+const code = `const ayaan = {
+  role: "full-stack developer",
+  focus: ["performance", "systems", "clean UI"],
+
+  mindset() {
+    return "build fast, keep it minimal";
+  },
+
+  currentWork: [
+    "PPlayer",
+    "Quick",
+    "GiggleOS"
+  ]
+};`;
+
+let i = 0;
+const codeEl = document.getElementById("about-code");
+
+function typeCode() {
+  if (i < code.length) {
+    codeEl.textContent += code.charAt(i);
+    i++;
+    setTimeout(typeCode, 20);
+  }
+}
+
+let started = false;
+
+window.addEventListener("scroll", () => {
+  const section = document.querySelector("#about");
+  const rect = section.getBoundingClientRect();
+
+  if (!started && rect.top < window.innerHeight - 100) {
+    started = true;
+    typeCode();
+  }
+});
+
+const startDate = new Date("2020-01-01");
+
+function updateUptime() {
+  const now = new Date();
+  const diff = now - startDate;
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+
+  document.getElementById("uptime").textContent = days + "d " + hours + "h";
+}
+
+setInterval(updateUptime, 1000);
+updateUptime();
+</script>
+
 </body>
 </html>
