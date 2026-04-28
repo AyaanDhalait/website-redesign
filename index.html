@@ -25,21 +25,27 @@
     <span class="comment typewriter" id="typewriter"></span>
 
     <h1>
-      Ayaan Dhalait<br>
-      <span class="sub">Software Developer</span>
+      Ayaan<br>
+      <span class="gradient">Dhalait</span>
     </h1>
 
-    <p>
-      I build fast, minimal software with obsessive attention to detail.
+    <p class="hero-desc">
+      I build fast, minimal software with precision and intent.
     </p>
 
     <div class="hero-cta">
       <a href="https://github.com/AyaanDhalait" target="_blank">
-        <button class="primary">Visit My Github</button>
+        <button class="primary">github()</button>
       </a>
-      <a href="#contact">
-        <button class="ghost"><span class="comment">// contact().me</span></button>
+      <a href="#projects">
+        <button class="ghost">view_work()</button>
       </a>
+    </div>
+
+    <div class="hero-meta">
+      <span><span class="dot"></span> available for work</span>
+      <span class="divider"></span>
+      <span>based in india</span>
     </div>
 
   </div>
@@ -50,7 +56,6 @@
 
     <div class="about-left">
       <span class="comment">// about</span>
-
       <h2>Building systems that feel fast.</h2>
 
       <p class="section-text">
@@ -63,11 +68,6 @@
         From low-level experiments to polished interfaces, everything I build
         is driven by clarity and efficiency.
       </p>
-
-      <div class="about-actions">
-        <a href="#projects" class="primary">view_projects()</a>
-        <a href="#contact" class="ghost"><span class="comment">// get_in_touch</span></a>
-      </div>
     </div>
 
     <div class="about-right">
@@ -159,7 +159,6 @@
   <div class="container">
 
     <span class="comment">// contact</span>
-
     <h2>Let's Get in touch.</h2>
 
     <form action="https://formspree.io/f/xwvavoee" method="POST" class="form">
@@ -212,10 +211,10 @@
 
 <script>
 const lines = [
-  "// full-stack developer",
-  "// performance-focused",
-  "// system builder",
-  "// crafting clean interfaces"
+  "// frtont-end developer",
+  "// python programmer",
+  "// UI/UX enthusiast",
+  "// Ex-CTO"
 ];
 
 let lineIndex = 0;
@@ -250,30 +249,31 @@ function type() {
 
 type();
 
-const code = `const ayaan = {
-  role: "full-stack developer",
-  focus: ["performance", "systems", "clean UI"],
+const code = `
+<span class="kw">class</span> <span class="class">Ayaan</span>:
+    <span class="kw">def</span> <span class="func">__init__</span>(<span class="param">self</span>):
+        <span class="param">self</span>.<span class="prop">role</span> = <span class="str">"front-end developer"</span>
+        <span class="param">self</span>.<span class="prop">focus</span> = [
+            <span class="str">"performance"</span>,
+            <span class="str">"systems"</span>,
+            <span class="str">"clean UI"</span>
+        ]
 
-  mindset() {
-    return "build fast, keep it minimal";
-  },
+    <span class="kw">def</span> <span class="func">mindset</span>(<span class="param">self</span>):
+        <span class="kw">return</span> <span class="str">"build fast, keep it minimal"</span>
 
-  currentWork: [
-    "PPlayer",
-    "Quick",
-    "GiggleOS"
-  ]
-};`;
+    <span class="kw">def</span> <span class="func">current_work</span>(<span class="param">self</span>):
+        <span class="kw">return</span> [
+            <span class="str">"PPlayer"</span>,
+            <span class="str">"Quick"</span>,
+            <span class="str">"GiggleOS"</span>
+        ]`;
 
 let i = 0;
 const codeEl = document.getElementById("about-code");
 
 function typeCode() {
-  if (i < code.length) {
-    codeEl.textContent += code.charAt(i);
-    i++;
-    setTimeout(typeCode, 20);
-  }
+  codeEl.innerHTML = code;
 }
 
 let started = false;
@@ -288,7 +288,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const startDate = new Date("2020-01-01");
+const startDate = new Date("2012-08-30");
 
 function updateUptime() {
   const now = new Date();
@@ -302,7 +302,14 @@ function updateUptime() {
 
 setInterval(updateUptime, 1000);
 updateUptime();
-</script>
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
+  });
+});
+</script>
 </body>
 </html>
